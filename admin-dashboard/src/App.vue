@@ -10,6 +10,24 @@
       app
     >
       <v-list>
+        <v-list-tile>
+          <v-list-tile-action>
+            <img src="./assets/vue-logo.jpg" alt="" width="30px" height="30px">
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-title>VUE DASHBOARD</v-list-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-divider></v-divider>
+        <v-list-tile>
+          <v-list-tile-action>
+            <img src="./assets/guy.jpg" alt="" width="20px" height="20px">
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>John Smith</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-divider></v-divider>
         <v-list-tile
           value="true"
           v-for="(item, i) in items"
@@ -70,12 +88,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Dashboard from './components/Dashboard'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Dashboard
   },
   data () {
     return {
@@ -83,9 +101,42 @@ export default {
       drawer: true,
       fixed: false,
       items: [{
-        icon: 'bubble_chart',
-        title: 'Inspire'
-      }],
+        icon: 'home',
+        title: 'Dashboard'
+      },
+      {
+        icon: 'pages',
+        title: 'Pages'
+      },
+      {
+        icon: 'grid_on',
+        title: 'Components'
+      },
+      {
+        icon: 'assignment',
+        title: 'Forms'
+      },
+      {
+        icon: 'view_agenda',
+        title: 'Tables'
+      },
+      {
+        icon: 'navigation',
+        title: 'Maps'
+      },
+      {
+        icon: 'widgets',
+        title: 'Widgets'
+      },
+      {
+        icon: 'bar_chart',
+        title: 'Charts'
+      },
+      {
+        icon: 'calendar_today',
+        title: 'Calendar'
+      }
+      ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
