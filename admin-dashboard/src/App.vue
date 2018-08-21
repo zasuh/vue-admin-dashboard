@@ -19,20 +19,49 @@
           </v-list-tile-content>
         </v-list-tile>
         <v-divider></v-divider>
-        <v-list-tile>
-          <v-list-tile-action>
-            <img src="./assets/guy.jpg" alt="" width="20px" height="20px">
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>John Smith</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
+        <v-list-group value="true">
+          <v-list-tile slot="activator">
+            <v-list-tile-action>
+              <img src="./assets/guy.jpg" alt="" width="20px" height="20px">
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>John Smith</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-list-tile>
+            <v-list-tile-action>
+              MP
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>My Profile</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-list-tile>
+            <v-list-tile-action>
+              EP
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>Edit Profile</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-list-tile>
+            <v-list-tile-action>
+              S
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>Settings</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list-group>
         <v-divider></v-divider>
         <v-list-tile
           value="true"
           v-for="(item, i) in items"
           :key="i"
-        >
+          >
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
           </v-list-tile-action>
@@ -63,7 +92,7 @@
       </v-btn>
     </v-toolbar>
     <v-content>
-      <HelloWorld/>
+      <Dashboard/>
     </v-content>
     <v-navigation-drawer
       temporary
@@ -82,7 +111,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2017</span>
+      <span>Žane Suhadolnik &copy; 2017</span>
     </v-footer>
   </v-app>
 </template>
@@ -140,8 +169,13 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'Admin Dashboard'
     }
   }
 }
 </script>
+
+<style>
+
+</style>
+
